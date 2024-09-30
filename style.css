@@ -1,0 +1,38 @@
+:root {
+  --clr-neutral-100: #fbfbfb;
+  --clr-neutral-300: #dce6ec;
+  --clr-neutral-500: #c0c0c0;
+  --clr-neutral-900: #323538;
+
+  --clr-blue-400: #66d5f2;
+  --clr-blue-800: #94b3c5;
+  --clr-blue-900: #638190;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto repeat(12, 1fr);
+  grid-template-rows: auto 1fr;
+  min-height: 100svh;
+  margin: 0;
+}
+
+aside {
+  grid-row: 1 / -1;
+  background-color: blue;
+  width: 20vw;
+}
+
+header {
+  grid-column: 2 / -1;
+  grid-row: 1;
+  background-color: grey;
+  height: 50vh;
+}
+
+main {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  background-color: black;
+  height: 300vh;
+}
