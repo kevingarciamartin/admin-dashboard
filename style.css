@@ -34,7 +34,8 @@ body {
 
   display: grid;
   grid-template-columns: var(--_body-padding) auto repeat(12, 1fr) var(
-      --_body-padding, 1rem
+      --_body-padding,
+      1rem
     );
   grid-template-rows: var(--_body-padding) auto 1fr var(--_body-padding);
 
@@ -49,7 +50,7 @@ aside {
   grid-row: 1 / -1;
 
   min-height: 100svh;
-  width: 20vw;
+  width: 15vw;
   box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.5);
 
   .aside-container {
