@@ -199,7 +199,7 @@ header {
 
       &:has(img) {
         border-radius: 99rem;
-        padding: 0.5ch 1ch;
+        padding: 0.5ch 1ch 0.5ch 0.5ch;
         aspect-ratio: initial;
         transition: background-color var(--tra-duration-base) ease;
 
