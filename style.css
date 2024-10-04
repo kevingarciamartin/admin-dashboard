@@ -306,6 +306,8 @@ main {
       display: grid;
       gap: calc(var(--_main-grid-gap) / 4);
       grid-column: span 4;
+      
+      border-left: 0.5rem solid var(--clr-text);
 
       &:not(:nth-last-of-type(-n + 2)) {
         margin-bottom: var(--_main-grid-gap);
@@ -376,6 +378,7 @@ main {
       img {
         border-color: var(--clr-text-tertiary);
         height: 3rem;
+        box-shadow: 0 0 3px black;
       }
     }
   }
