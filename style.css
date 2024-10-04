@@ -16,7 +16,8 @@
   --clr-accent-tertiary: var(--clr-blue-900);
   --clr-background: var(--clr-neutral-900);
   --clr-text: var(--clr-neutral-100);
-  --clr-text-secondary: var(--clr-neutral-500);
+  --clr-text-secondary: var(--clr-neutral-300);
+  --clr-text-tertiary: var(--clr-neutral-500);
 
   --ff-base: "Roboto", sans-serif;
 
@@ -52,6 +53,7 @@ body {
 button {
   color: inherit;
   cursor: pointer;
+  transition: all var(--tra-duration-base) ease;
 
   &:hover,
   &:focus-visible {
@@ -64,6 +66,7 @@ svg {
 }
 
 img {
+  border: 1px solid var(--clr-accent-tertiary);
   border-radius: 50%;
   height: 2rem;
   aspect-ratio: 1 / 1;
@@ -137,10 +140,10 @@ aside {
         }
 
         a:not(:hover, :active, :focus, :focus-visible, :target) {
-          color: var(--clr-text-secondary);
+          color: var(--clr-text-tertiary);
 
           svg {
-            fill: var(--clr-text-secondary);
+            fill: var(--clr-text-tertiary);
           }
         }
       }
@@ -177,7 +180,7 @@ header {
       width: 100%;
 
       input {
-        background-color: var(--clr-text-secondary);
+        background-color: var(--clr-text-tertiary);
         border: none;
         border-radius: 99rem;
         padding: 0.5ch 2ch;
@@ -201,7 +204,7 @@ header {
       width: fit-content;
       aspect-ratio: 1 / 1;
       padding: 1ch;
-      fill: var(--clr-text-secondary);
+      fill: var(--clr-text-tertiary);
       transition: fill var(--tra-duration-base) ease;
 
       &:hover,
@@ -217,7 +220,7 @@ header {
         transition: background-color var(--tra-duration-base) ease;
 
         span {
-          color: var(--clr-text-secondary);
+          color: var(--clr-text-tertiary);
           transition: all var(--tra-duration-base) ease;
         }
 
@@ -339,6 +342,9 @@ main {
     }
 
     article {
+      display: flex;
+      gap: 0.5rem;
+
       font-size: 0.8rem;
 
       p:last-of-type {
@@ -347,8 +353,25 @@ main {
     }
   }
 
-  .trending article {
-    display: flex;
-    gap: 0.5rem;
+  .announcements article {
+    flex-direction: column;
+
+    h5 {
+      font-size: 0.9rem;
+    }
+  }
+
+  .trending > div {
+    gap: var(--_main-grid-gap);
+
+    article {
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        border-color: var(--clr-text-tertiary);
+        height: 3rem;
+      }
+    }
   }
 }
