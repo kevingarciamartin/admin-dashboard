@@ -53,7 +53,6 @@ body {
 button {
   color: inherit;
   cursor: pointer;
-  transition: all var(--tra-duration-base) ease;
 
   &:hover,
   &:focus-visible {
@@ -198,6 +197,10 @@ header {
     }
 
     &:first-of-type button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       background-color: transparent;
       border: none;
       border-radius: 50%;
@@ -205,7 +208,9 @@ header {
       aspect-ratio: 1 / 1;
       padding: 1ch;
       fill: var(--clr-text-tertiary);
-      transition: fill var(--tra-duration-base) ease;
+      transition-property: fill, background-color;
+      transition-duration: var(--tra-duration-base);
+      transition-timing-function: ease;
 
       &:hover,
       &:focus-visible {
@@ -221,7 +226,7 @@ header {
 
         span {
           color: var(--clr-text-tertiary);
-          transition: all var(--tra-duration-base) ease;
+          transition: color var(--tra-duration-base) ease;
         }
 
         &:hover,
